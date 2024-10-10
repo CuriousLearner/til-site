@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import axios from "axios";
+import Posts from "./Posts";
+import PostDetail from "./PostDetail";
+import TopicPosts from "./TopicPosts";
 
-function App() {
+const App = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://raw.githubusercontent.com/CuriousLearner/til/refs/heads/main/til.json"
+        );
+        setPosts(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Posts posts={posts} />} />
+        <Route path="/:path" element={<PostDetail posts={posts} />} />
+        <Route path="/topic/:topic" element={<TopicPosts posts={posts} />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
