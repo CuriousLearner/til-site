@@ -24,7 +24,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/til-site">
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Posts posts={posts} />} />
         <Route path="/:path" element={<PostDetail posts={posts} />} />
