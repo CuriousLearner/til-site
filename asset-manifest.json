@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/til-site/static/css/main.8354bd1c.css",
-    "main.js": "/til-site/static/js/main.8d001664.js",
-    "static/js/511.7dea6280.chunk.js": "/til-site/static/js/511.7dea6280.chunk.js",
-    "index.html": "/til-site/index.html",
-    "main.8354bd1c.css.map": "/til-site/static/css/main.8354bd1c.css.map",
-    "main.8d001664.js.map": "/til-site/static/js/main.8d001664.js.map",
-    "511.7dea6280.chunk.js.map": "/til-site/static/js/511.7dea6280.chunk.js.map"
+    "main.css": "https://til.sanyamkhurana.com/static/css/main.8354bd1c.css",
+    "main.js": "https://til.sanyamkhurana.com/static/js/main.ed0d614d.js",
+    "static/js/511.7dea6280.chunk.js": "https://til.sanyamkhurana.com/static/js/511.7dea6280.chunk.js",
+    "index.html": "https://til.sanyamkhurana.com/index.html",
+    "main.8354bd1c.css.map": "https://til.sanyamkhurana.com/static/css/main.8354bd1c.css.map",
+    "main.ed0d614d.js.map": "https://til.sanyamkhurana.com/static/js/main.ed0d614d.js.map",
+    "511.7dea6280.chunk.js.map": "https://til.sanyamkhurana.com/static/js/511.7dea6280.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8354bd1c.css",
-    "static/js/main.8d001664.js"
+    "static/js/main.ed0d614d.js"
   ]
 }
